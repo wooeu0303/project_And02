@@ -27,6 +27,7 @@ public class MainActivity extends ActionBarActivity {
             }
          };
          handler.sendEmptyMessageDelayed(0, 1000);
+         System.out.println("123");
     }
 
 }
