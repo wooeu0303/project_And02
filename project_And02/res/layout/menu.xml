@@ -13,7 +13,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="vertical" >
+        android:orientation="vertical" 
+        android:background="#747474">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="welcome to royalpalace"
+            android:textSize="27sp" 
+            android:textColor="#dddddd"/>
+
     </LinearLayout>
 
     <FrameLayout
@@ -72,8 +83,8 @@
 
         <Button
             android:id="@+id/ibtn_fb"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="right"
             android:layout_marginBottom="5dp"
             android:layout_marginRight="5dp"
