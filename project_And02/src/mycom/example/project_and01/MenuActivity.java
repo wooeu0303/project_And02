@@ -51,11 +51,9 @@ public class MenuActivity extends Activity {
 		
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(MenuActivity.this, MyPreview.class);
-			    startActivity(intent);
-			      
-			}
-		       
+				Intent intent = new Intent(MenuActivity.this, CameraActivity.class);
+			    startActivity(intent); 
+			}  
 		});  
  	
 
@@ -68,9 +66,7 @@ public class MenuActivity extends Activity {
           public void onClick(View v) {
         	  Intent intent = new Intent(MenuActivity.this, AroundActivity.class);
               startActivity(intent);
-              
           }
-           
        });  
        
         
@@ -82,9 +78,7 @@ public class MenuActivity extends Activity {
 	       public void onClick(View v) {
 	          Intent myintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.google.com/"));
 	          startActivity(myintent);
-	             
-	       }
-	           
+	       }     
 	   });
    
 	   //페이스북 연결
@@ -94,12 +88,9 @@ public class MenuActivity extends Activity {
 	     @Override
 	     public void onClick(View v) {
 	        Intent myintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.facebook.com/"));
-	        startActivity(myintent);
-	        
-	     }
-	      
+	        startActivity(myintent);  
+	     } 
 	   });
-        
     }
     
     
@@ -134,10 +125,7 @@ public class MenuActivity extends Activity {
 			imageView.setImageResource(galleryIda.get(position));
 			return convertView;
 		}
-		
-	
 	}
- 
 };
 
 

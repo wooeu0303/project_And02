@@ -26,7 +26,8 @@
         </activity>
         <activity android:name="MenuActivity"></activity>
         <activity android:name="AroundActivity"></activity>
-        <activity android:name="GalleryAdapter"></activity>
+        <activity android:name="CameraActivity"
+            android:screenOrientation="portrait"></activity>
        
         
     </application>
