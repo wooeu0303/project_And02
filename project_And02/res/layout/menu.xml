@@ -7,26 +7,27 @@
 <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#E6FFFF" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical" >
+    </LinearLayout>
 
     <FrameLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp" >
-        
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="283dp"
-            android:layout_height="163dp"
-            android:layout_gravity="center"
-            android:src="@drawable/shape_1" />
       
         <AdapterViewFlipper
-        android:id="@+id/adapterViewFlipper1"
-        android:flipInterval="3000"
-        android:layout_width="283dp"
-        android:layout_height="163dp"
-        android:layout_gravity="center" >
+            android:id="@+id/adapterViewFlipper1"
+            android:layout_width="fill_parent"
+            android:layout_height="190dp"
+            android:layout_gravity="center"
+            android:flipInterval="3000" >
+
     	</AdapterViewFlipper>
     	
         
@@ -34,29 +35,33 @@
     </FrameLayout>
 
     <LinearLayout
-        android:layout_width="200dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical" >
 
         <Button
             android:id="@+id/btn_start"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Start" />
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_start" />
 
         <Button
             android:id="@+id/btn_homepage"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="HomePage" />
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_homepage" />
 
         <Button
             android:id="@+id/btn_AroundView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="AroundView" />
+            android:layout_width="230dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_aroundview" />
+
     </LinearLayout>
 
     <LinearLayout

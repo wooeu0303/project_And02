@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00D8FF"
     android:gravity="center"
     android:orientation="vertical" >
 
@@ -9,6 +10,20 @@
         android:id="@+id/imageView1"
         android:layout_width="133dp"
         android:layout_height="194dp"
-        android:src="@drawable/log" />
+        android:layout_weight="0.13"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/picture4" />
+
+    <TextView
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="ⓒcooperation_10M"
+        android:textColor="#FFFFFF"
+        android:textSize="8pt" >
+
+        <requestFocus />
+    </TextView>
 
 </LinearLayout>

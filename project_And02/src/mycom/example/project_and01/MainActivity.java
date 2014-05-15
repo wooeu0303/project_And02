@@ -1,16 +1,16 @@
 package mycom.example.project_and01;
 
-import android.support.v7.app.ActionBarActivity;
+
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-
 import android.view.Window;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
 	@SuppressLint("HandlerLeak")
     @Override
@@ -26,8 +26,8 @@ public class MainActivity extends ActionBarActivity {
              finish();
             }
          };
-         handler.sendEmptyMessageDelayed(0, 1000);
-         System.out.println("123");
+         handler.sendEmptyMessageDelayed(0, 2000);
+         
     }
 
 }
