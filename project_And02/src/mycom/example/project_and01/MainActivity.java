@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
         
+        
         Handler handler = new Handler() {
             public void handleMessage(Message msg) {
              super.handleMessage(msg);
