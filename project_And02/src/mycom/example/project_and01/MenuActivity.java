@@ -4,13 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -19,14 +23,14 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class MenuActivity extends Activity {
+public class MenuActivity extends Activity implements OnTouchListener{
 	
 	//Field
 	//메인화면 사진 저장할 List
 	List<Integer> galleryIda=new ArrayList<Integer>();
 	//사진 넘겨주는 Flipper 객체
 	private AdapterViewFlipper avf;
-	
+	private int mX=0;
 
     /** Called when the activity is first created. */
     @Override
@@ -42,6 +46,7 @@ public class MenuActivity extends Activity {
 		}
 		
 		avf=(AdapterViewFlipper)findViewById(R.id.adapterViewFlipper1);
+		avf.setOnTouchListener(this);
 		avf.setAdapter(new GalleryAdapter(this));
 		avf.startFlipping();
     
@@ -125,6 +130,24 @@ public class MenuActivity extends Activity {
 			imageView.setImageResource(galleryIda.get(position));
 			return convertView;
 		}
+	}
+
+
+	@Override
+	public boolean onTouch(View v, MotionEvent event) {
+		if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            mX=(int)event.getX();
+        } 
+		if (event.getAction() == MotionEvent.ACTION_UP) {
+            int nTouchPosx=(int)event.getX();
+            if(nTouchPosx<mX){
+            	avf.showNext();
+            }else if(nTouchPosx>mX){
+            	avf.showPrevious();
+            }
+            mX=nTouchPosx;
+		}
+		return true;
 	}
 };
 
