@@ -21,6 +21,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class MenuActivity extends Activity implements OnTouchListener{
 	
@@ -43,11 +44,11 @@ public class MenuActivity extends Activity implements OnTouchListener{
         
         LayoutInflater inflater = (LayoutInflater)getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
-        		LinearLayout linear = (LinearLayout)inflater.inflate(R.layout.menu, null);
+        		RelativeLayout linear = (RelativeLayout)inflater.inflate(R.layout.menu, null);
  
-        		LinearLayout.LayoutParams paramlinear = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
+        		RelativeLayout.LayoutParams paramlinear = new RelativeLayout.LayoutParams(
+        		RelativeLayout.LayoutParams.MATCH_PARENT,
+        		RelativeLayout.LayoutParams.MATCH_PARENT);
         	win.addContentView(linear, paramlinear);
         
         
