@@ -11,7 +11,7 @@
         android:layout_gravity="center"
         android:background="#5D5D5D"
         android:orientation="vertical" >
-		
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -23,30 +23,29 @@
                 android:layout_width="50dp"
                 android:layout_height="36dp"
                 android:src="@drawable/picture4" />
-        
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Guide.10M"
-            android:textColor="#ffffff"
-            android:textSize="30sp" />
-        
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Guide.10M"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp" >
+        android:layout_height="243dp"
+        android:adjustViewBounds="true" >
 
         <AdapterViewFlipper
             android:id="@+id/adapterViewFlipper1"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:flipInterval="3000" >
         </AdapterViewFlipper>
-
     </FrameLayout>
 
     <LinearLayout
@@ -65,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-           
+            android:gravity="center"
             android:orientation="vertical" >
 
             <LinearLayout
@@ -80,8 +79,6 @@
                     android:layout_height="60dp"
                     android:layout_gravity="left"
                     android:background="@drawable/ic_camera" />
-
-                
             </LinearLayout>
 
             <View
@@ -95,11 +92,10 @@
 
                 <Button
                     android:id="@+id/btn_homepage"
-                    android:layout_width="230dp"
+                    android:layout_width="220dp"
                     android:layout_height="60dp"
                     android:layout_gravity="left"
                     android:background="@drawable/ic_home" />
-
             </LinearLayout>
 
             <View
@@ -113,13 +109,12 @@
 
                 <Button
                     android:id="@+id/btn_AroundView"
-                    android:layout_width="240dp"
+                    android:layout_width="220dp"
                     android:layout_height="60dp"
                     android:layout_gravity="left"
                     android:background="@drawable/ic_location" />
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
     <View
@@ -152,9 +147,7 @@
                 android:background="@drawable/facebook"
                 android:padding="0sp"
                 android:scaleType="centerCrop" />
-
         </LinearLayout>
-
     </LinearLayout>
-</LinearLayout>
 
+</LinearLayout>
