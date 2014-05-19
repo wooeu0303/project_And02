@@ -34,43 +34,14 @@
         android:layout_below="@id/barView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true" 
         android:flipInterval="2000" >
     </AdapterViewFlipper>
 
-    
-	<Button
-	    android:id="@+id/btn_start"
-	    android:layout_width="220dp"
-	    android:layout_height="60dp"
-	    android:layout_below="@id/adapterViewFlipper1"
-	    android:layout_centerHorizontal="true"
-	    android:layout_marginTop="10dp"
-	    android:background="@drawable/ic_camera" />
-
-	<Button
-	    android:id="@+id/btn_homepage"
-	    android:layout_width="220dp"
-	    android:layout_height="60dp"
-	    android:layout_below="@id/btn_start"
-	    android:layout_centerHorizontal="true"
-	    android:layout_marginTop="10dp"
-	    android:background="@drawable/ic_home" />
-	
-	<Button
-	    android:id="@+id/btn_AroundView"
-	    android:layout_width="220dp"
-	    android:layout_height="60dp"
-	    android:layout_below="@id/btn_homepage"
-	    android:layout_centerHorizontal="true"
-	    android:layout_marginTop="10dp"
-	    android:background="@drawable/ic_location" />
-	
-	
+    	
 	<Button
 	    android:id="@+id/ibtn_setting"
-	    android:layout_width="50dp"
-	    android:layout_height="10dp"
+	    android:layout_width="45dp"
+	    android:layout_height="45dp"
 	    android:layout_alignParentBottom="true"
 	    android:layout_alignParentLeft="true"
 	    android:layout_marginBottom="10dp"
@@ -88,8 +59,8 @@
 
    	<Button
        android:id="@+id/ibtn_fb"
-       android:layout_width="40dp"
-       android:layout_height="40dp"
+       android:layout_width="43dp"
+       android:layout_height="43dp"
        android:layout_toLeftOf="@id/ibtn_tw"
        android:layout_alignParentBottom="true"
        android:layout_marginRight="10dp"
@@ -113,5 +84,31 @@
 	    android:layout_marginBottom="10dp"
 	    android:src="@drawable/text1" />
 
+	<Button
+	    android:id="@+id/btn_AroundView"
+	    android:layout_width="220dp"
+	    android:layout_height="60dp"
+	    android:layout_above="@id/whiteView"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="10dp"
+	    android:background="@drawable/ic_location" />
+	
+	<Button
+	    android:id="@+id/btn_homepage"
+	    android:layout_width="220dp"
+	    android:layout_height="60dp"
+	    android:layout_above="@id/btn_AroundView"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="10dp"
+	    android:background="@drawable/ic_home" />
+	
+	<Button
+	    android:id="@+id/btn_start"
+	    android:layout_width="220dp"
+	    android:layout_height="60dp"
+	    android:layout_above="@id/btn_homepage"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="10dp"
+	    android:background="@drawable/ic_camera" />
 
 </RelativeLayout>
