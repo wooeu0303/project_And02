@@ -44,12 +44,12 @@ public class MenuActivity extends Activity implements OnTouchListener{
         
         LayoutInflater inflater = (LayoutInflater)getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
-        		RelativeLayout linear = (RelativeLayout)inflater.inflate(R.layout.menu, null);
+        		RelativeLayout relative = (RelativeLayout)inflater.inflate(R.layout.menu, null);
  
-        		RelativeLayout.LayoutParams paramlinear = new RelativeLayout.LayoutParams(
+        		RelativeLayout.LayoutParams paramRelative = new RelativeLayout.LayoutParams(
         		RelativeLayout.LayoutParams.MATCH_PARENT,
         		RelativeLayout.LayoutParams.MATCH_PARENT);
-        	win.addContentView(linear, paramlinear);
+        	win.addContentView(relative, paramRelative);
         
         
         	
@@ -94,8 +94,8 @@ public class MenuActivity extends Activity implements OnTouchListener{
 	
 	   @Override
 	       public void onClick(View v) {
-	          Intent myintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.google.com/"));
-	          startActivity(myintent);
+	          Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.google.com/"));
+	          startActivity(intent);
 	       }     
 	   });
    
@@ -105,8 +105,8 @@ public class MenuActivity extends Activity implements OnTouchListener{
 	
 	     @Override
 	     public void onClick(View v) {
-	        Intent myintent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.facebook.com/"));
-	        startActivity(myintent);  
+	        Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.facebook.com/"));
+	        startActivity(intent);  
 	     } 
 	   });
     }
