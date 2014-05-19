@@ -3,12 +3,10 @@ package mycom.example.project_and01;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,6 +20,7 @@ import android.widget.AdapterViewFlipper;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class MenuActivity extends Activity implements OnTouchListener{
 	
@@ -33,13 +32,26 @@ public class MenuActivity extends Activity implements OnTouchListener{
 	private int mX=0;
 
     /** Called when the activity is first created. */
-    @Override
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.menu);
+        Window win=getWindow();
+        win.setContentView(R.layout.background);
+       
+        
+        LayoutInflater inflater = (LayoutInflater)getSystemService(
+                Context.LAYOUT_INFLATER_SERVICE);
+        		LinearLayout linear = (LinearLayout)inflater.inflate(R.layout.menu, null);
+ 
+        		LinearLayout.LayoutParams paramlinear = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        	win.addContentView(linear, paramlinear);
         
         
+        	
         //drawable에 있는 사진 List저장
 		for(int i=1;i<=5;i++){
 			galleryIda.add(getResources().getIdentifier("kbg"+i, "drawable", this.getPackageName()));
