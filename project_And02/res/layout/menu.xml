@@ -15,6 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         android:text="Guide.10M"
         android:textColor="#ffffff"
         android:textSize="30sp" />
@@ -24,6 +25,7 @@
         android:layout_width="50dp"
         android:layout_height="36dp"
         android:layout_toLeftOf="@id/textView1"
+        android:layout_marginTop="5dp"
         android:layout_alignParentTop="@id/barView"
         android:src="@drawable/picture4" />
 

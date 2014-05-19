@@ -11,7 +11,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="65dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="5dp"
         android:src="@drawable/pic3" />
 
 </RelativeLayout>
