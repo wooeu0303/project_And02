@@ -109,6 +109,17 @@ public class MenuActivity extends Activity implements OnTouchListener{
 	        startActivity(intent);  
 	     } 
 	   });
+	   
+	   //트위터 연결
+	   Button ibtn_tw = (Button) findViewById(R.id.ibtn_tw);
+	   ibtn_tw.setOnClickListener(new OnClickListener(){
+	
+	     @Override
+	     public void onClick(View v) {
+	        Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.twitter.com/"));
+	        startActivity(intent);  
+	     } 
+	   });
     }
     
     
