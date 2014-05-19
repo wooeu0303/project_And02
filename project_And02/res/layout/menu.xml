@@ -116,38 +116,53 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+<RelativeLayout 
+	   	 android:layout_width="match_parent"
+         android:layout_height="match_parent" >
+	     
+	     <Button
+	         android:id="@+id/ibtn_setting"
+	         android:layout_width="50dp"
+	         android:layout_height="50dp"
+	         android:layout_alignParentBottom="true"
+	         android:layout_alignParentLeft="true"
+	         android:layout_marginBottom="10dp"
+	         android:background="@drawable/setting" />
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="5dp" />
+          <Button
+              android:id="@+id/ibtn_tw"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_alignParentBottom="true"
+              android:layout_alignParentRight="true"
+              android:layout_marginBottom="10dp"
+              android:layout_marginRight="10dp"
+              android:background="@drawable/twitter" />
+	     
+	     <Button
+             android:id="@+id/ibtn_fb"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_toLeftOf="@id/ibtn_tw"
+             android:layout_alignParentBottom="true"
+             android:layout_marginRight="10dp"
+             android:layout_marginBottom="10dp"
+             android:background="@drawable/facebook"/>
+	     
+	     
+	     <View
+	         android:id="@+id/whiteview"
+	         android:layout_width="fill_parent"
+	         android:layout_height="5dp"
+	         android:background="#ffffff" 
+	         android:layout_marginBottom="10dp"
+	         android:layout_above="@id/ibtn_fb"/>
+	</RelativeLayout>
+   
+                
+                
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical" >
+               
 
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="5dp"
-            android:background="#ffffff" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical" >
-
-            <Button
-                android:id="@+id/ibtn_fb"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/facebook"
-                android:padding="0sp"
-                android:scaleType="centerCrop" />
-        </LinearLayout>
-    </LinearLayout>
 
 </LinearLayout>
