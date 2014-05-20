@@ -37,10 +37,11 @@ public class MenuActivity extends Activity implements OnTouchListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.menu);
 
-        /* setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+         
+        /*requestWindowFeature(Window.FEATURE_NO_TITLE);
         Window win=getWindow();
         win.setContentView(R.layout.background);
        
