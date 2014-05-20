@@ -36,7 +36,10 @@ public class MenuActivity extends Activity implements OnTouchListener{
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.menu);
+
+        /* setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Window win=getWindow();
         win.setContentView(R.layout.background);
@@ -50,11 +53,11 @@ public class MenuActivity extends Activity implements OnTouchListener{
         		RelativeLayout.LayoutParams.MATCH_PARENT,
         		RelativeLayout.LayoutParams.MATCH_PARENT);
         	win.addContentView(relative, paramRelative);
-        
+        */
         
         	
         //drawable에 있는 사진 List저장
-		for(int i=1;i<=5;i++){
+		for(int i=1;i<=10;i++){
 			galleryIda.add(getResources().getIdentifier("kbg"+i, "drawable", this.getPackageName()));
 		}
 		
