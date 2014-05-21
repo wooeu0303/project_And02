@@ -33,20 +33,30 @@ public class CameraActivity extends Activity {
 
         // Create a RelativeLayout container that will hold a SurfaceView,
         // and set it as the content of our activity.
-        mPreview = new MyPreview(this);
-        setContentView(mPreview);
-
+        
+//        mPreview = new MyPreview(this);
+//        setContentView(mPreview);
+        
+        setContentView(R.layout.camera);
+        mPreview = (MyPreview)findViewById(R.id.surface1);
+        SurfaceHolder mpHolder = mPreview.getHolder();
+        mpHolder.addCallback(mPreview);
+        mpHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+        //mPreview = new MyPreview(this);
+        
+        
+        
         // Find the total number of cameras available
         numberOfCameras = Camera.getNumberOfCameras();
 
         // Find the ID of the default camera
         CameraInfo cameraInfo = new CameraInfo();
-            for (int i = 0; i < numberOfCameras; i++) {
-                Camera.getCameraInfo(i, cameraInfo);
-                if (cameraInfo.facing == CameraInfo.CAMERA_FACING_BACK) {
-                    defaultCameraId = i;
-                }
+        for (int i = 0; i < numberOfCameras; i++) {
+            Camera.getCameraInfo(i, cameraInfo);
+            if (cameraInfo.facing == CameraInfo.CAMERA_FACING_BACK) {
+                defaultCameraId = i;
             }
+        }
     }
 
     @Override
@@ -55,52 +65,10 @@ public class CameraActivity extends Activity {
 
         // Open the default i.e. the first rear facing camera.
         mCamera = Camera.open();
+        mPreview.setCamera(mCamera);
         cameraCurrentlyLocked = defaultCameraId;
     }
     
 
-	public class MyPreview extends SurfaceView implements SurfaceHolder.Callback{
-		
-		Context mc;
-		SurfaceHolder mHolder;
-		//Camera camera;
-		
-		public MyPreview(Context context) {
-			super(context);
-			mc=context;
-			mHolder=getHolder();
-			mHolder.addCallback(this);
-			mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-		}
-		
-		//==Ã³¸®±â
-		@Override
-		public void surfaceCreated(SurfaceHolder holder) {
-			//camera=Camera.open();
-			try {
-				mCamera.setPreviewDisplay(holder);
-			} catch (IOException e) {
-				mCamera.release();
-				mCamera=null;
-				//e.printStackTrace();
-			}
-			
-			mCamera.setDisplayOrientation(90); 
-			
-		}
-		@Override
-		public void surfaceChanged(SurfaceHolder holder, int format, int width,
-				int height) {
-			Camera.Parameters params=mCamera.getParameters();
-			params.setPreviewSize(width, height);
-			//camera.setParameters(params);
-			mCamera.startPreview();
-		}
-		@Override
-		public void surfaceDestroyed(SurfaceHolder holder) {
-			mCamera.stopPreview();
-			mCamera.release();
-			mCamera=null;
-		}
-	}
+	
 }

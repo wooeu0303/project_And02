@@ -219,6 +219,9 @@ public class AroundActivity extends Activity{
 				case MotionEvent.ACTION_UP:			//first finger lifted
 				case MotionEvent.ACTION_POINTER_UP:	//second finger lifted
 					mode = NONE;
+					if (scaledImageWidth < width){
+						fixView();
+					}
 					break;
 				 
 				case MotionEvent.ACTION_MOVE:
@@ -243,6 +246,16 @@ public class AroundActivity extends Activity{
 				return true;	// indicate event was handled
 			}
 		
+		// 화면보다 작게 축소 하지 않도록
+		private void fixView() {
+			matrix.getValues(value);
+			setImageFitOnView();
+			setCenter();
+			matrix.setValues(value);
+			setImageMatrix(matrix);
+			
+		}
+				
 		private void changeMatrixValue(Matrix matrix, ImageView view){
 			matrix.getValues(value);
 			if (drawable == null)  return;
@@ -259,20 +272,6 @@ public class AroundActivity extends Activity{
 			value[4] = 2;
 			}
 		
-		// 화면보다 작게 축소 하지 않도록
-			if (imageWidth > width || imageHeight > height){
-	//	            if (scaledImageWidth < width && scaledImageHeight < height)
-	//	            {
-	//	                setImageFitOnView();
-	//	            }
-				if (scaledImageWidth < width){
-					setImageFitOnView();
-				}
-			}
-			else {// 본래 크기보다 작게 되지 않도록
-				if (value[0] < 1)   value[0] = 1;
-				if (value[4] < 1)   value[4] = 1;
-			}
 			setCenter();
 			matrix.setValues(value);
 			setImageMatrix(matrix);
