@@ -76,10 +76,9 @@ public class MenuActivity extends Activity implements OnTouchListener{
 				Intent intent = new Intent(MenuActivity.this, CameraActivity.class);
 			    startActivity(intent); 
 			}  
-		});  
- 	
-
+		}); 
 		
+ 
 		//주변지도
        Button btn_AroundView = (Button) findViewById(R.id.btn_AroundView);
        btn_AroundView.setOnClickListener(new OnClickListener(){
@@ -102,6 +101,19 @@ public class MenuActivity extends Activity implements OnTouchListener{
 	          startActivity(intent);
 	       }     
 	   });
+	   
+	   //설정
+       Button setting = (Button) findViewById(R.id.ibtn_setting);
+       setting.setOnClickListener(new OnClickListener(){
+
+          @Override
+          public void onClick(View v) {
+        	  Intent intent = new Intent(MenuActivity.this, SettingActivity.class);
+              startActivity(intent);
+          }
+       });
+       
+     
    
 	   //페이스북 연결
 	   Button ibtn_fb = (Button) findViewById(R.id.ibtn_fb);
