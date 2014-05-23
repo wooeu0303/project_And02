@@ -175,15 +175,4 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="350dp"
-        android:layout_height="35dp"
-        android:layout_above="@+id/relativeLayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/shape_1"
-        android:text="경복궁  기온 20c 날씨 맑음"
-        android:textSize="17sp" />
-
 </RelativeLayout>

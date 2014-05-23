@@ -22,6 +22,7 @@ public class SettingActivity extends Activity {
 			setContentView(R.layout.setting);
 			overridePendingTransition(R.anim.leftin, R.anim.leftout);
 			
+			
 		   //설정_뒤로
 	       Button btn_back = (Button) findViewById(R.id.btn_back);
 	       btn_back.setOnClickListener(new OnClickListener(){
@@ -44,7 +45,6 @@ public class SettingActivity extends Activity {
 			list.setOnItemClickListener(new OnItemClickListener() {
 				@Override
 				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
-				
 			}
 
 				
