@@ -8,6 +8,7 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="19" />
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -29,6 +30,11 @@
         <activity android:name="CameraActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name="SettingActivity"></activity>
+        <activity 
+			android:name="mycom.example.project_and01.DetailPopUp"
+			android:theme="@android:style/Theme.Dialog"
+			android:windowSoftInputMode="stateHidden" android:configChanges="orientation|keyboardHidden">
+		</activity>
        
         
     </application>
