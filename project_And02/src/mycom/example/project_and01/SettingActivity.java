@@ -20,6 +20,7 @@ public class SettingActivity extends Activity {
 		protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.setting);
+			overridePendingTransition(R.anim.leftin, R.anim.leftout);
 			
 		   //설정_뒤로
 	       Button btn_back = (Button) findViewById(R.id.btn_back);
