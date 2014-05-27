@@ -66,7 +66,7 @@ public class CameraActivity extends Activity implements LocationListener,SensorE
 	Map<String, Map<String, String>> locationMap = new HashMap<String, Map<String, String>>();
     
     //위치정보
-	private Location location;
+	private Location location = new Location("gps");
 	private LocationManager locMgr;
 	private String provider;
 	private Location targetLoc;
@@ -127,7 +127,7 @@ public class CameraActivity extends Activity implements LocationListener,SensorE
 		Criteria criteria = new Criteria();
 		criteria.setAccuracy(Criteria.ACCURACY_FINE);
 		provider = locMgr.getBestProvider(criteria, true);
-        location=locMgr.getLastKnownLocation(provider);
+        //location=locMgr.getLastKnownLocation(provider);
         locMgr.requestLocationUpdates(provider, 2, 10, this);
         
         targetLoc=new Location("target");
@@ -342,7 +342,9 @@ public class CameraActivity extends Activity implements LocationListener,SensorE
 	
 	//location
 	@Override
-	public void onLocationChanged(Location location) {
+	public void onLocationChanged(Location clocation) {
+		location = clocation;
+		
 	}
 
 	@Override
