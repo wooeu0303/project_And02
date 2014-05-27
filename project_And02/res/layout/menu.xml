@@ -2,177 +2,85 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff" >
-
-    <View
-        android:id="@+id/barView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:background="#5D5D5D" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:text="Guide.10M"
-        android:textColor="#ffffff"
-        android:textSize="30sp" />
+    android:background="#C6FFFF" >
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="50dp"
-        android:layout_height="36dp"
-        android:layout_alignParentTop="@id/barView"
-        android:layout_marginTop="5dp"
-        android:layout_toLeftOf="@id/textView1"
-        android:src="@drawable/picture4" />
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="149dp"
+        android:background="@drawable/line2"/>
 
-    <AdapterViewFlipper
-        android:id="@+id/adapterViewFlipper1"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_homepage"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@id/barView"
-        android:flipInterval="2000" >
+        android:layout_alignLeft="@+id/btn_start"
+        android:layout_below="@+id/btn_start"
+        android:layout_marginTop="30dp"
+        android:background="#00ff0000"
+        android:text="HomePage"
+        android:textColor="#565656"
+        android:textStyle="bold" />
 
-    </AdapterViewFlipper>
+    <DigitalClock
+        android:id="@+id/digitalClock1"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/button5"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="33dp"
+        android:text="DigitalClock"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/ibtn_setting"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:background="@drawable/ic_4" />
-
-    <Button
-        android:id="@+id/ibtn_tw"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/ic_6" />
-
-    <Button
-        android:id="@+id/ibtn_fb"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_toLeftOf="@id/ibtn_tw"
-        android:background="@drawable/ic_5" />
-
-    <View
-        android:id="@+id/whiteView"
-        android:layout_width="fill_parent"
-        android:layout_height="5dp"
-        android:layout_above="@id/ibtn_fb"
-        android:layout_marginBottom="10dp"
-        android:background="#D5D5D5" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="40dp"
-        android:layout_height="140dp"
-        android:layout_above="@id/whiteView"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/text1" />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignParentLeft="true" >
+        android:layout_alignLeft="@+id/btn_AroundView"
+        android:layout_below="@+id/btn_AroundView"
+        android:layout_marginTop="33dp"
+        android:background="#00ff0000"
+        android:text="setting"
+        android:textColor="#565656"
+        android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_start"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/ic_2" />
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="18dp"
+        android:background="#00ff0000"
+        android:text="Start View"
+        android:textColor="#565656"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/TextView02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_start"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:text="시작하기"
-            android:textSize="15sp" />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/digitalClock1"
+        android:layout_alignTop="@+id/btn_homepage"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/aa1" />
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout2"
-            android:layout_width="70dp"
-            android:layout_height="100dp"
-            android:layout_below="@+id/btn_start"
-            android:layout_toLeftOf="@+id/btn_start"
-            android:layout_marginTop="20dp" >
-
-            <Button
-                android:id="@+id/btn_homepage"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginRight="-10dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/ic_1" />
-
-            <TextView
-                android:id="@+id/TextView03"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_homepage"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="홈페이지"
-                android:textSize="15sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout3"
-            android:layout_width="70dp"
-            android:layout_height="100dp"
-            android:layout_below="@+id/btn_start"
-            android:layout_toRightOf="@+id/btn_start"
-            android:layout_marginTop="20dp" >
-
-            <Button
-                android:id="@+id/btn_AroundView"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="-10dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/ic_3" />
-
-            <TextView
-                android:id="@+id/TextView04"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_AroundView"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="둘러보기"
-                android:textSize="15sp" />
-
-        </RelativeLayout>
-
-    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_AroundView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_homepage"
+        android:layout_below="@+id/btn_homepage"
+        android:layout_marginTop="25dp"
+        android:background="#00ff0000"
+        android:text="Around Map"
+        android:textColor="#565656"
+        android:textStyle="bold" />
 
 </RelativeLayout>

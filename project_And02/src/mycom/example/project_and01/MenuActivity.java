@@ -23,13 +23,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-public class MenuActivity extends Activity implements OnTouchListener{
+public class MenuActivity extends Activity{
 	
 	//Field
 	//메인화면 사진 저장할 List
 	List<Integer> galleryIda=new ArrayList<Integer>();
 	//사진 넘겨주는 Flipper 객체
-	private AdapterViewFlipper avf;
+	//private AdapterViewFlipper avf;
 	private int mX=0;
 
     /** Called when the activity is first created. */
@@ -56,7 +56,7 @@ public class MenuActivity extends Activity implements OnTouchListener{
         	win.addContentView(relative, paramRelative);
         */
         
-        	
+        /*	
         //drawable에 있는 사진 List저장
 		for(int i=1;i<=10;i++){
 			galleryIda.add(getResources().getIdentifier("kbg"+i, "drawable", this.getPackageName()));
@@ -66,7 +66,7 @@ public class MenuActivity extends Activity implements OnTouchListener{
 		avf.setOnTouchListener(this);
 		avf.setAdapter(new GalleryAdapter(this));
 		avf.startFlipping();
-    
+    */
 		//카메라start
 		Button btn_start = (Button) findViewById(R.id.btn_start);
 		btn_start.setOnClickListener(new OnClickListener(){
@@ -114,7 +114,7 @@ public class MenuActivity extends Activity implements OnTouchListener{
        });
        
      
-   
+   /*
 	   //페이스북 연결
 	   Button ibtn_fb = (Button) findViewById(R.id.ibtn_fb);
 	   ibtn_fb.setOnClickListener(new OnClickListener(){
@@ -135,10 +135,11 @@ public class MenuActivity extends Activity implements OnTouchListener{
 	        Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.twitter.com/"));
 	        startActivity(intent);  
 	     } 
-	   });
+	   });*/
     }
+}
     
-    
+    /*
     //adapter inner class
 	public class GalleryAdapter extends BaseAdapter {
 		private Context mContext;
@@ -190,7 +191,7 @@ public class MenuActivity extends Activity implements OnTouchListener{
 		return true;
 	}
 };
-
+*/
 
 
 
