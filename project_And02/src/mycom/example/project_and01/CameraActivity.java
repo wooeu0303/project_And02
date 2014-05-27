@@ -377,8 +377,8 @@ public class CameraActivity extends Activity implements LocationListener,SensorE
                      SensorManager.getOrientation(R, orientation);
                      
                      
-                     //avg=avg*(1.0f-0.1f)+orientation[0]*0.1f;
-                     azimut = (float)Math.toDegrees(orientation[0]);
+                     avg=avg*(1.0f-0.1f)+orientation[0]*0.1f;
+                     azimut = (float)Math.toDegrees(avg);
                     
                      if(azimut<0)
                              azimut = azimut+360;
