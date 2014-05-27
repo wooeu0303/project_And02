@@ -283,7 +283,7 @@ public class CameraActivity extends Activity implements LocationListener,SensorE
 		
 		private int x;
 		private int y;
-		private int size=40;
+		private int size=100;
 		
 		public AugmentedView(Context context) {
 			super(context);
@@ -328,7 +328,7 @@ public class CameraActivity extends Activity implements LocationListener,SensorE
 			x=(int) event.getX();
 			y=(int) event.getY();
 			if(event.getAction()==MotionEvent.ACTION_DOWN){
-				if(x<x1+200 && x>x1 && y<y1 && y>y1-100){
+				if(x<x1+300 && x>x1 && y<y1 && y>y1-100){
 					Intent intent = new Intent(CameraActivity.this, DetailPopUp.class);
 					intent.putExtra("detail", locationMap.get("gangnam").get("locationDetail"));
 					startActivity(intent);
