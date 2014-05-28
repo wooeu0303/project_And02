@@ -114,7 +114,7 @@ public class MenuActivity extends Activity{
        });
        
      
-   /*
+   
 	   //페이스북 연결
 	   Button ibtn_fb = (Button) findViewById(R.id.ibtn_fb);
 	   ibtn_fb.setOnClickListener(new OnClickListener(){
@@ -135,7 +135,7 @@ public class MenuActivity extends Activity{
 	        Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.twitter.com/"));
 	        startActivity(intent);  
 	     } 
-	   });*/
+	   });
     }
 }
     

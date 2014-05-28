@@ -2,11 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C6FFFF" >
+    android:background="#DE4F4F" >
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
+        android:layout_width="3dp"
         android:layout_height="450dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
@@ -22,19 +22,9 @@
         android:layout_marginTop="30dp"
         android:background="#00ff0000"
         android:text="HomePage"
-        android:textColor="#565656"
-        android:textStyle="bold" />
-
-    <DigitalClock
-        android:id="@+id/digitalClock1"
-        android:layout_width="130dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/button5"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="18dp"
-        android:layout_marginLeft="33dp"
-        android:text="DigitalClock"
-        android:textSize="30dp" />
+        android:textColor="#EAEAEA"
+        android:textStyle="bold"
+        android:textSize="9pt" />
 
     <Button
         android:id="@+id/ibtn_setting"
@@ -45,8 +35,9 @@
         android:layout_marginTop="33dp"
         android:background="#00ff0000"
         android:text="setting"
-        android:textColor="#565656"
-        android:textStyle="bold" />
+        android:textColor="#EAEAEA"
+        android:textStyle="bold"
+        android:textSize="9pt" />
 
     <Button
         android:id="@+id/btn_start"
@@ -58,18 +49,9 @@
         android:layout_marginTop="18dp"
         android:background="#00ff0000"
         android:text="Start View"
-        android:textColor="#565656"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignLeft="@+id/digitalClock1"
-        android:layout_alignTop="@+id/btn_homepage"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="27dp"
-        android:background="@drawable/aa1" />
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20pt" />
 
     <Button
         android:id="@+id/btn_AroundView"
@@ -80,7 +62,36 @@
         android:layout_marginTop="25dp"
         android:background="#00ff0000"
         android:text="Around Map"
-        android:textColor="#565656"
-        android:textStyle="bold" />
+        android:textColor="#EAEAEA"
+        android:textStyle="bold"
+        android:textSize="8pt" />
 
+    <Button
+        android:id="@+id/ibtn_fb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignLeft="@+id/ibtn_setting"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/ic_5" />
+
+    <Button
+        android:id="@+id/ibtn_tw"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/ibtn_fb"
+        android:layout_alignBottom="@+id/ibtn_fb"
+        android:layout_alignRight="@+id/ibtn_setting"
+        android:background="@drawable/ic_6" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="180dp"
+        android:layout_height="400dp"
+        android:layout_alignTop="@+id/btn_start"
+        android:layout_marginRight="13dp"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:scaleType="fitXY"
+        android:src="@drawable/a11" />
+   
 </RelativeLayout>
