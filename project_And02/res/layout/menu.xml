@@ -2,96 +2,78 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DE4F4F" >
+    android:background="@drawable/a100" >
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="3dp"
-        android:layout_height="450dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="149dp"
-        android:background="@drawable/line2"/>
+       <Button
+           android:id="@+id/ibtn_fb"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:layout_alignBaseline="@+id/ibtn_tw"
+           android:layout_alignBottom="@+id/ibtn_tw"
+           android:layout_alignLeft="@+id/ibtn_setting"
+           android:background="@drawable/ic_5" />
 
-    <Button
-        android:id="@+id/btn_homepage"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn_start"
-        android:layout_below="@+id/btn_start"
-        android:layout_marginTop="30dp"
-        android:background="#00ff0000"
-        android:text="HomePage"
-        android:textColor="#EAEAEA"
-        android:textStyle="bold"
-        android:textSize="9pt" />
+       <Button
+           android:id="@+id/btn_AroundView"
+           android:layout_width="100dp"
+           android:layout_height="70dp"
+           android:layout_alignLeft="@+id/btn_homepage"
+           android:layout_below="@+id/btn_homepage"
+           android:background="@drawable/aroundview_kr"/>
 
-    <Button
-        android:id="@+id/ibtn_setting"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn_AroundView"
-        android:layout_below="@+id/btn_AroundView"
-        android:layout_marginTop="33dp"
-        android:background="#00ff0000"
-        android:text="setting"
-        android:textColor="#EAEAEA"
-        android:textStyle="bold"
-        android:textSize="9pt" />
+       <Button
+           android:id="@+id/ibtn_setting"
+           android:layout_width="100dp"
+           android:layout_height="70dp"
+           android:layout_alignLeft="@+id/btn_AroundView"
+           android:layout_below="@+id/btn_AroundView"
+           android:background="@drawable/setting_kr"/>
 
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/imageView1"
-        android:layout_marginRight="23dp"
-        android:layout_marginTop="18dp"
-        android:background="#00ff0000"
-        android:text="Start View"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="20pt" />
+       <Button
+           android:id="@+id/btn_homepage"
+           android:layout_width="100dp"
+           android:layout_height="70dp"
+           android:layout_alignParentRight="true"
+           android:layout_below="@+id/btn_start"
+           android:layout_marginRight="27dp"
+           android:layout_marginTop="23dp"
+           android:background="@drawable/homepage_kr" />
 
-    <Button
-        android:id="@+id/btn_AroundView"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn_homepage"
-        android:layout_below="@+id/btn_homepage"
-        android:layout_marginTop="25dp"
-        android:background="#00ff0000"
-        android:text="Around Map"
-        android:textColor="#EAEAEA"
-        android:textStyle="bold"
-        android:textSize="8pt" />
+       <Button
+           android:id="@+id/ibtn_tw"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:layout_alignRight="@+id/ibtn_setting"
+           android:layout_below="@+id/ibtn_setting"
+           android:layout_marginTop="35dp"
+           android:background="@drawable/ic_6" />
 
-    <Button
-        android:id="@+id/ibtn_fb"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/imageView1"
-        android:layout_alignLeft="@+id/ibtn_setting"
-        android:layout_marginBottom="22dp"
-        android:background="@drawable/ic_5" />
+       <Button
+           android:id="@+id/btn_start"
+           android:layout_width="180dp"
+           android:layout_height="100dp"
+           android:layout_alignParentRight="true"
+           android:layout_alignTop="@+id/imageView2"
+           android:background="@drawable/startview_kr" />
 
-    <Button
-        android:id="@+id/ibtn_tw"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignBaseline="@+id/ibtn_fb"
-        android:layout_alignBottom="@+id/ibtn_fb"
-        android:layout_alignRight="@+id/ibtn_setting"
-        android:background="@drawable/ic_6" />
+       <ImageView
+           android:id="@+id/imageView3"
+           android:layout_width="wrap_content"
+           android:layout_height="80dp"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentTop="true"
+           android:layout_marginTop="26dp"
+           android:src="@drawable/a99"
+           android:textSize="400pt"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="180dp"
-        android:layout_height="400dp"
-        android:layout_alignTop="@+id/btn_start"
-        android:layout_marginRight="13dp"
-        android:layout_toLeftOf="@+id/imageView1"
-        android:scaleType="fitXY"
-        android:src="@drawable/a11" />
+       <ImageView
+           android:id="@+id/imageView2"
+           android:layout_width="250dp"
+           android:layout_height="400dp"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/imageView3"
+           android:layout_marginTop="17dp"
+           android:scaleType="fitXY"
+           android:src="@drawable/a003" />
    
 </RelativeLayout>
